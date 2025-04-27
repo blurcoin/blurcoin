@@ -2,192 +2,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blurcoin</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        /* Global Styles */
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f7931a; /* Bitcoin Orange */
-            color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            flex-direction: column;
-        }
-        h1 {
-            font-size: 3em;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        h1 img {
-            width: 50px;
-            margin-right: 20px;
-        }
-        p {
-            font-size: 1.3em;
-            margin: 20px 0;
-            color: white;
-        }
-        .upload-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 30px;
-        }
-        input[type="file"] {
-            display: none;
-        }
-        button {
-            background: #f7931a;
-            border: none;
-            padding: 15px 30px;
-            font-size: 1.2em;
-            color: white;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: background 0.3s, transform 0.3s;
-        }
-        button:hover {
-            background: #e67e22;
-            transform: scale(1.05);
-        }
-        button:active {
-            transform: scale(0.95);
-        }
-        .social-links {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        .social-links a {
-            margin: 0 15px;
-            font-size: 2em;
-            color: white;
-            transition: color 0.3s;
-        }
-        .social-links a:hover {
-            color: #f7931a;
-        }
-        /* Loader styles */
-        #loader {
-            position: fixed;
-            z-index: 9999;
-            background: #f7931a; /* Bitcoin orange */
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.5em;
-            font-family: 'Poppins', sans-serif;
-        }
-        .spinner {
-            width: 50px;
-            height: 50px;
-            border: 6px solid #ffffff;
-            border-top: 6px solid #333333;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin-bottom: 20px;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        /* Mobile responsiveness */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.2em;
-            }
-            h1 img {
-                width: 40px;
-                margin-bottom: 10px;
-            }
-            p {
-                font-size: 1.2em;
-                margin: 0 10px 1em;
-            }
-            .upload-container {
-                width: 90%;
-                padding: 15px;
-            }
-            button {
-                width: 80%;
-                font-size: 1em;
-                margin-top: 10px;
-            }
-            img#preview {
-                max-width: 100%;
-            }
-            .social-links {
-                font-size: 1.5em;
-                margin-top: 30px;
-            }
-        }
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 1.8em;
-            }
-            p {
-                font-size: 1em;
-            }
-            button {
-                font-size: 0.9em;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blurcoin - Life's A Blur</title>
+  <link rel="icon" type="image/png" href="blurcoin-logo.png">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #f7931a 0%, #ffb347 100%);
+      font-family: 'Arial', sans-serif;
+      color: white;
+      text-align: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.2em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    h1 img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+    p {
+      font-size: 1.5em;
+      margin-bottom: 1em;
+      font-style: italic;
+    }
+    .upload-container {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 20px;
+      border-radius: 20px;
+      backdrop-filter: blur(5px);
+      margin-bottom: 20px;
+    }
+    input[type="file"] {
+      margin: 10px 0;
+    }
+    img#preview {
+      max-width: 90%;
+      height: auto;
+      margin-top: 20px;
+      transition: filter 1s ease;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+    button {
+      background: white;
+      color: #f7931a;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 10px;
+      margin-right: 10px;
+    }
+    button:hover {
+      background: #ffd699;
+    }
+    .social-links {
+      margin-top: 20px;
+    }
+    .social-links a {
+      color: white;
+      font-size: 2em;
+      margin: 0 10px;
+      text-decoration: none;
+      transition: transform 0.3s;
+    }
+    .social-links a:hover {
+      transform: scale(1.2);
+    }
+    /* Background animation */
+    .background-blobs {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
+    .blob {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      animation: moveBlobs 20s infinite alternate ease-in-out;
+    }
+    .blob:nth-child(1) {
+      width: 300px;
+      height: 300px;
+      top: 10%;
+      left: 10%;
+    }
+    .blob:nth-child(2) {
+      width: 400px;
+      height: 400px;
+      top: 50%;
+      left: 70%;
+    }
+    @keyframes moveBlobs {
+      0% { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(50px, -50px) scale(1.2); }
+    }
+  </style>
 </head>
 <body>
-    <div id="loader">
-        <div class="spinner"></div>
-        <p>Loading...</p>
-    </div>
 
-    <div id="main-content" style="display:none;">
-        <h1><img src="blurcoin-logo.png" alt="Blurcoin Logo">Blurcoin</h1>
-        <p>Life's a Blur</p>
-        <div class="upload-container">
-            <input type="file" id="upload" accept="image/*">
-            <button onclick="document.getElementById('upload').click()">Upload Image</button>
-            <br><br>
-            <button id="blur-button" onclick="applyBlur()">Blur It!</button>
-            <br><br>
-            <img id="preview" src="#" alt="Image Preview" style="max-width: 100%; margin-top: 20px;">
-        </div>
+<div class="background-blobs">
+  <div class="blob"></div>
+  <div class="blob"></div>
+</div>
 
-        <div class="social-links">
-            <a href="https://x.com/blurcoinsol" target="_blank">X</a>
-        </div>
-    </div>
+<div>
+  <h1>
+    <img src="blurcoin-logo.png" alt="Blurcoin logo">
+    Blurcoin
+  </h1>
+  <p>Life's A Blur</p>
+</div>
 
-    <script>
-        window.addEventListener('load', function() {
-            document.getElementById('loader').style.display = 'none';
-            document.getElementById('main-content').style.display = 'block';
-        });
+<div class="upload-container">
+  <input type="file" accept="image/*" id="upload">
+  <br>
+  <button onclick="blurImage()">Blur it!</button>
+  <button onclick="downloadImage()">Download Blurred</button>
+  <div>
+    <img id="preview" src="" alt="" />
+  </div>
+</div>
 
-        function applyBlur() {
-            const fileInput = document.getElementById('upload');
-            const preview = document.getElementById('preview');
-            if (fileInput.files && fileInput.files[0]) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    preview.src = e.target.result;
-                    preview.style.filter = 'blur(5px)';
-                };
-                reader.readAsDataURL(fileInput.files[0]);
-            }
-        }
-    </script>
+<div class="social-links">
+  <a href="https://x.com/blurcoinsol" target="_blank">🐦</a>
+</div>
+
+<script>
+  const upload = document.getElementById('upload');
+  const preview = document.getElementById('preview');
+
+  upload.addEventListener('change', function() {
+    const file = this.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        preview.src = e.target.result;
+        preview.style.filter = "none"; // Reset blur
+      }
+      reader.readAsDataURL(file);
+    }
+  });
+
+  function blurImage() {
+    preview.style.filter = "blur(8px)";
+  }
+
+  function downloadImage() {
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    const img = preview;
+
+    if (!img.src) return alert("Upload an image first!");
+
+    canvas.width = img.naturalWidth;
+    canvas.height = img.naturalHeight;
+
+    ctx.filter = 'blur(8px)';
+    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+    const link = document.createElement('a');
+    link.download = 'blurred-image.png';
+    link.href = canvas.toDataURL();
+    link.click();
+  }
+</script>
+
 </body>
 </html>
+
